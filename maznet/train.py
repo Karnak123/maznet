@@ -2,11 +2,11 @@
 Here's a function that can train a neural network
 """
 
-from neuronet.tensor import Tensor
-from neuronet.nn import NeuralNet
-from neuronet.loss import Loss, MSE
-from neuronet.optim import Optimizer, SGD
-from neuronet.data import DataIterator, BatchIterator
+from maznet.tensor import Tensor
+from maznet.nn import NeuralNet
+from maznet.loss import Loss, MSE
+from maznet.optim import Optimizer, SGD
+from maznet.data import DataIterator, BatchIterator
 
 
 def train(

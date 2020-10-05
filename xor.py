@@ -4,9 +4,9 @@ with a simple linear model is XOR
 """
 
 import numpy as np
-from neuronet.train import train
-from neuronet.nn import NeuralNet
-from neuronet.layers import Linear, Tanh
+from maznet.train import train
+from maznet.nn import NeuralNet
+from maznet.layers import Linear, Tanh
 
 inputs = np.array([[0, 0], [1, 0], [0, 1], [1, 1]])
 

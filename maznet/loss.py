@@ -4,7 +4,7 @@ we use this to adjust the parameters of out network
 """
 
 import numpy as np
-from neuronet.tensor import Tensor
+from maznet.tensor import Tensor
 
 
 class Loss:
