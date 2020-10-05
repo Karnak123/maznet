@@ -5,8 +5,8 @@ we're not goint to make it one.
 """
 
 from typing import Sequence, Iterator, Tuple
-from tensor import Tensor
-from layers import Layer
+from neuronet.tensor import Tensor
+from neuronet.layers import Layer
 
 
 class NeuralNet:
@@ -20,7 +20,7 @@ class NeuralNet:
 
     def backward(self, grad: Tensor) -> Tensor:
         for layer in reversed(self.layers):
-            grad = layer.backward(grad)
+            grad = layer.backwards(grad)
         return grad
 
     def params_and_grads(self) -> Iterator[Tuple[Tensor, Tensor]]:
