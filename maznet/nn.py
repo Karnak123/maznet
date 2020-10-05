@@ -5,8 +5,8 @@ we're not goint to make it one.
 """
 
 from typing import Sequence, Iterator, Tuple
-from neuronet.tensor import Tensor
-from neuronet.layers import Layer
+from maznet.tensor import Tensor
+from maznet.layers import Layer
 
 
 class NeuralNet:

@@ -4,7 +4,7 @@ of our network based on the gradients computed
 during backpropagation
 """
 
-from neuronet.nn import NeuralNet
+from maznet.nn import NeuralNet
 
 
 class Optimizer:

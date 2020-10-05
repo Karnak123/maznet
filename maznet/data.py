@@ -5,7 +5,7 @@ So here are some tools for iterating over our data in batches.
 
 from typing import Iterator, NamedTuple
 import numpy as np
-from neuronet.tensor import Tensor
+from maznet.tensor import Tensor
 
 Batch = NamedTuple("Batch", [("inputs", Tensor), ("targets", Tensor)])
 

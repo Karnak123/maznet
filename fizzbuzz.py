@@ -12,10 +12,10 @@ The following program gives more or less correct results after 10000 epochs
 
 from typing import List
 import numpy as np
-from neuronet.train import train
-from neuronet.nn import NeuralNet
-from neuronet.layers import Linear, Tanh
-from neuronet.optim import SGD
+from maznet.train import train
+from maznet.nn import NeuralNet
+from maznet.layers import Linear, Tanh
+from maznet.optim import SGD
 
 
 def fizz_buzz_encode(x: int) -> List[int]:

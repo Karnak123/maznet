@@ -1,1 +1,1 @@
-# neuronet
+# maznet
