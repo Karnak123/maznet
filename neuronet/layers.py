@@ -6,7 +6,7 @@ and propagate gradients backwards.
 
 from typing import Dict, Callable
 import numpy as np
-from tensor import Tensor
+from neuronet.tensor import Tensor
 
 
 class Layer:
