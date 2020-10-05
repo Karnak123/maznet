@@ -24,4 +24,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: check formatting
-        run: black .
+        run: |
+          pip install -U black
+          black .
