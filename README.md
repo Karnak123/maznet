@@ -10,7 +10,7 @@ and comments.
  - numpy
 
  ## Setup
- You can either download using `pip install maznet`
+ You can either download using `pip install maznet==1.0.0`
  or download this repository and use accordingly.
 
  ## Usage
