@@ -15,7 +15,7 @@ class DataIterator:
         raise NotImplementedError
 
 
-class BatchIterator:
+class BatchIterator(DataIterator):
     def __init__(self, batch_size: int = 32, shuffle: bool = True) -> None:
         self.batch_size = batch_size
         self.shuffle = shuffle
