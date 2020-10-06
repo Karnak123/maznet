@@ -3,15 +3,10 @@ name: Formatting
 on: [push, pull_request]
 
 jobs:
-  lint:
+  formatting:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
       - uses: psf/black@stable
-  mypy:
-    runs-on: ubuntu-latest
-    steps:
       - uses: jpetrucciani/mypy-check@0.761
-        with:
-          path: 'maznet'
