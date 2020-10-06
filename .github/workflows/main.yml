@@ -10,5 +10,5 @@ jobs:
       - uses: actions/setup-python@v2
       - uses: psf/black@stable
 
-- name: Mypy Check
+name: Mypy Check
   uses: jpetrucciani/mypy-check@0.761
