@@ -10,7 +10,7 @@ and comments.
  - numpy
 
 ## Setup
-You can either download using the package and use it from 
+You can either download the package from 
 `pip install maznet==1.0.0`
 or download this repository and use accordingly.
 
@@ -18,7 +18,7 @@ or download this repository and use accordingly.
 See `xor.py` and `fizzbuzz.py` for usage examples
 
 ## Future work
-I intend to broaden the library adding more optimizers,
+Broaden the library functionality by adding more optimizers,
 losses, layers and such.
 
 ## Contribution
