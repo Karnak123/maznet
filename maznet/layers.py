@@ -139,3 +139,12 @@ def sigmoid_prime(x: Tensor) -> Tensor:
 class Sigmoid(Activation):
     def __init__(self):
         super().__init__(sigmoid, sigmoid_prime)
+
+
+def softplus(x: Tensor) -> Tensor:
+    return np.log(1 + np.exp(x))
+
+
+class SoftPlus(Activation):
+    def __init__(self):
+        super().__init__(softplus, sigmoid)
