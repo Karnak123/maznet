@@ -100,3 +100,51 @@ def tanh_prime(x: Tensor) -> Tensor:
 class Tanh(Activation):
     def __init__(self):
         super().__init__(tanh, tanh_prime)
+
+
+def relu(x: Tensor) -> Tensor:
+    return x * (x > 0)
+
+
+def relu_prime(x: Tensor) -> Tensor:
+    return 1 * (x > 0)
+
+
+class ReLU(Activation):
+    def __init__(self):
+        super().__init__(relu, relu_prime)
+
+
+def arctan(x: Tensor) -> Tensor:
+    return np.arctan(x)
+
+
+def arctan_prime(x: Tensor) -> Tensor:
+    return 1 / (1 + x * x)
+
+
+class ArcTan(Activation):
+    def __init__(self):
+        super().__init__(arctan, arctan_prime)
+
+
+def sigmoid(x: Tensor) -> Tensor:
+    return 1 / (1 + np.exp(-x))
+
+
+def sigmoid_prime(x: Tensor) -> Tensor:
+    return sigmoid(x) * (1 - sigmoid(x))
+
+
+class Sigmoid(Activation):
+    def __init__(self):
+        super().__init__(sigmoid, sigmoid_prime)
+
+
+def softplus(x: Tensor) -> Tensor:
+    return np.log(1 + np.exp(x))
+
+
+class SoftPlus(Activation):
+    def __init__(self):
+        super().__init__(softplus, sigmoid)
