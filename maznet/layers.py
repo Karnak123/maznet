@@ -126,3 +126,16 @@ def arctan_prime(x: Tensor) -> Tensor:
 class ArcTan(Activation):
     def __init__(self):
         super().__init__(arctan, arctan_prime)
+
+
+def sigmoid(x: Tensor) -> Tensor:
+    return 1 / (1 + np.exp(-x))
+
+
+def sigmoid_prime(x: Tensor) -> Tensor:
+    return sigmoid(x) * (1 - sigmoid(x))
+
+
+class Sigmoid(Activation):
+    def __init__(self):
+        super().__init__(sigmoid, sigmoid_prime)
