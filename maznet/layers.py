@@ -100,3 +100,16 @@ def tanh_prime(x: Tensor) -> Tensor:
 class Tanh(Activation):
     def __init__(self):
         super().__init__(tanh, tanh_prime)
+
+
+def relu(x: Tensor) -> Tensor:
+    return x * (x > 0)
+
+
+def relu_prime(x: Tensor) -> Tensor:
+    return 1 * (x > 0)
+
+
+class ReLU(Activation):
+    def __init__(self):
+        super().__init__(relu, relu_prime)
