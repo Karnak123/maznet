@@ -113,3 +113,16 @@ def relu_prime(x: Tensor) -> Tensor:
 class ReLU(Activation):
     def __init__(self):
         super().__init__(relu, relu_prime)
+
+
+def arctan(x: Tensor) -> Tensor:
+    return np.arctan(x)
+
+
+def arctan_prime(x: Tensor) -> Tensor:
+    return 1 / (1 + x * x)
+
+
+class ArcTan(Activation):
+    def __init__(self):
+        super().__init__(arctan, arctan_prime)
