@@ -11,7 +11,7 @@ and comments.
 
 ## Setup
 You can either download the package from 
-`pip install maznet==1.0.0`
+`pip install maznet==1.0.1`
 or download this repository and use accordingly.
 
 ## Usage
