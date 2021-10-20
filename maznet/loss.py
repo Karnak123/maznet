@@ -8,6 +8,7 @@ from maznet.tensor import Tensor
 
 
 class Loss:
+    # A loss function measures how good our predictions are,
     def loss(self, predicted: Tensor, actual: Tensor) -> float:
         raise NotImplementedError
 

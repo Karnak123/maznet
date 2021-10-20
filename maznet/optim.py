@@ -8,11 +8,17 @@ from maznet.nn import NeuralNet
 
 
 class Optimizer:
+    """
+    Base class for all optimizers
+    """
     def step(self, net: NeuralNet) -> None:
         raise NotImplementedError
 
 
 class SGD(Optimizer):
+    """
+    Stochastic gradient descent
+    """
     def __init__(self, lr: float = 0.01) -> None:
         self.lr = lr
 

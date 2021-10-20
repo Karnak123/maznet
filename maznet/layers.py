@@ -10,7 +10,9 @@ from maznet.tensor import Tensor
 
 
 class Layer:
+    # A layer has a forward and backward pass
     def __init__(self) -> None:
+        # Layer has no parameters
         self.params: Dict[str, Tensor] = dict()
         self.grads: Dict[str, Tensor] = dict()
 
@@ -90,61 +92,75 @@ class Activation(Layer):
 
 
 def tanh(x: Tensor) -> Tensor:
+    # return np.tanh(x)
     return np.tanh(x)
 
 
 def tanh_prime(x: Tensor) -> Tensor:
+    # return 1 - np.tanh(x) ** 2
     return 1 - tanh(x) ** 2
 
 
 class Tanh(Activation):
+    # Tanh is an activation function
     def __init__(self):
         super().__init__(tanh, tanh_prime)
 
 
 def relu(x: Tensor) -> Tensor:
+    # return np.maximum(0, x)
     return x * (x > 0)
 
 
 def relu_prime(x: Tensor) -> Tensor:
+    return (x > 0).astype(x.dtype)
     return 1 * (x > 0)
 
 
 class ReLU(Activation):
+    # ReLU is an activation function
     def __init__(self):
         super().__init__(relu, relu_prime)
 
 
 def arctan(x: Tensor) -> Tensor:
+    # return np.arctan(x)
     return np.arctan(x)
 
 
 def arctan_prime(x: Tensor) -> Tensor:
+    # return 1 / (1 + x ** 2)
     return 1 / (1 + x * x)
 
 
 class ArcTan(Activation):
+    # ArcTan is an activation function
     def __init__(self):
         super().__init__(arctan, arctan_prime)
 
 
 def sigmoid(x: Tensor) -> Tensor:
+    # return 1 / (1 + np.exp(-x))
     return 1 / (1 + np.exp(-x))
 
 
 def sigmoid_prime(x: Tensor) -> Tensor:
+    # return sigmoid(x) * (1 - sigmoid(x))
     return sigmoid(x) * (1 - sigmoid(x))
 
 
 class Sigmoid(Activation):
+    # Sigmoid is an activation function
     def __init__(self):
         super().__init__(sigmoid, sigmoid_prime)
 
 
 def softplus(x: Tensor) -> Tensor:
+    # return np.log(1 + np.exp(x))
     return np.log(1 + np.exp(x))
 
 
 class SoftPlus(Activation):
+    # SoftPlus is an activation function
     def __init__(self):
         super().__init__(softplus, sigmoid)
