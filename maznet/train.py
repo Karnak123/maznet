@@ -18,6 +18,7 @@ def train(
     loss: Loss = MSE(),
     optimizer: Optimizer = SGD(),
 ) -> None:
+    # Trains a neural network using mini-batch gradient descent.
     for epoch in range(num_epochs):
         epoch_loss = 0.0
         for batch in iterator(inputs, targets):
